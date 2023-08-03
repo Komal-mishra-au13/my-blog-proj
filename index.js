@@ -1,5 +1,5 @@
 const express = require('express');
-require('express-validator');
+
 const path = require('path');
 const bodyParser = require('body-parser');
 const { userRoutes, loggedUsers } = require('./Controllers/user');
@@ -71,7 +71,7 @@ app.get('/', async (req, res) => {
         const blogs = await Blog.find().populate('userId').sort({ _id: -1 });
         // console.log(blogs);
         console.log("HOME-loggedUsers", loggedUsers);
-        res.render('home', { title: "KoolVibes", layout, blogs });
+        res.render('home', { title: "KoolVibe", layout, blogs });
 
     } catch (error) {
         if (error) {
@@ -88,7 +88,7 @@ app.post('/', async(req, res)=> {
         // const blogs = await Blog.find().populate('userId').sort({ _id: -1 });
         const filteredblogs = await Blog.find({genre:req.body.search}).populate('userId').sort({ _id: -1 });
         // console.log(filteredblogs);
-        res.render('home', {layout, title:"KoolVibes Home", blogs:filteredblogs, msg: `<<-- Blogs in "${req.body.search}" category -->>`});
+        res.render('home', {layout, title:"KoolVibe Home", blogs:filteredblogs, msg: `<<-- Blogs in "${req.body.search}" category -->>`});
     } catch (error) {
         if (error) {
             console.log(error.message);
