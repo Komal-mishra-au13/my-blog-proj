@@ -1,4 +1,5 @@
 const express = require('express');
+require('express-validator');
 const path = require('path');
 const bodyParser = require('body-parser');
 const { userRoutes, loggedUsers } = require('./Controllers/user');
