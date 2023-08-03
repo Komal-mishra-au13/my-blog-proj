@@ -2,7 +2,7 @@
 
 
 
-**Project Name - KoolVibes** [link to KoolVibes!](https://blog-website-akx.herokuapp.com/)
+**Project Name - KoolVibes** [link to KoolVibes!](https://koolvibe.onrender.com/)
 
 ## Introduction 
 
